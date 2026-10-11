@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SecurePass - Password Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+        <header class="header">
+            <h1>SecurePass</h1>
+            <p>Generate strong and secure passwords</p>
+        </header>
+
+        <section class="generator">
+
+            <label for="password">Your Password</label>
+
+            <div class="password-output">
+                <input type="text" id="password" placeholder="Your password will appear here" readonly>
+
+                <button id="copy-btn" type="button">Copy</button>
+            </div>
+
+            <button id="generate-btn" type="button">
+                Generate Password
+            </button>
+
+            <div class="strength-section">
+                <p>Password Strength: <span id="strength-text">Not generated</span></p>
+                <div class="strength-meter">
+                    <div id="strength-bar"></div>
+                </div>
+            </div>
+
+            <div class="length-section">
+                <label for="length">
+                    Password Length: <span id="length-value">16</span>
+                </label>
+
+                <input type="range" id="length" min="8" max="64" value="16">
+            </div>
+
+            <fieldset class="options">
+                <legend>Character Options</legend>
+
+                <label>
+                    <input type="checkbox" id="uppercase" checked>
+                    Uppercase (A-Z)
+                </label>
+
+                <label>
+                    <input type="checkbox" id="lowercase" checked>
+                    Lowercase (a-z)
+                </label>
+
+                <label>
+                    <input type="checkbox" id="numbers" checked>
+                    Numbers (0-9)
+                </label>
+
+                <label>
+                    <input type="checkbox" id="symbols" checked>
+                    Symbols (!@#$)
+                </label>
+            </fieldset>
+
+            <p id="message" role="status" aria-live="polite"></p>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
